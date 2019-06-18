@@ -1,9 +1,37 @@
 # HurricaneTrimar
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/hurricane_trimar`. To experiment with that code, run `bin/console` for an interactive prompt.
+This gem adds methods for trimming spaces to `String`.
+This gem trims spaces using `[:space:]` of POSIX character class.
+So trimmed spaces by this gem are below.
 
-TODO: Delete this and the text above, and describe your gem
-
+|Character|
+|---|
+|U+0009|
+|U+000A|
+|U+000B|
+|U+000C|
+|U+000D|
+|U+0020|
+|U+00A0|
+|U+0085|
+|U+1680|
+|U+2000|
+|U+2001|
+|U+2002|
+|U+2003|
+|U+2004|
+|U+2005|
+|U+2006|
+|U+2007|
+|U+2008|
+|U+2009|
+|U+200A|
+|U+202F|
+|U+205F|
+|U+2028|
+|U+2029|
+|U+3000|
+    
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -22,17 +50,32 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+<<STR.trim
+\u0020\u3000
+\u0020\u3000Hello World\u0020\u3000
+\u3000\u0020
+STR
+# => "Hello World"
 
-## Development
+<<STR.ltrim
+\u0020\u3000
+\u0020\u3000Hello World\u0020\u3000
+\u3000\u0020"
+STR
+# => "Hello World\n\u3000\u0020\n"
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+<<STR.rtrim
+\u0020\u3000
+\u0020\u3000Hello World\u0020\u3000
+\u3000\u0020"
+STR
+# => "\u0020\u3000\nHello World" 
+```
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hurricane_trimar.
+Bug reports and pull requests are welcome on GitHub at https://github.com/sanfrecce-osaka/hurricane_trimar.
 
 ## License
 
