@@ -1,6 +1,20 @@
-require "hurricane_trimar/version"
+# frozen_string_literal: true
 
-module HurricaneTrimar
-  class Error < StandardError; end
-  # Your code goes here...
+require 'hurricane_trimar/version'
+
+module HurricaneTrimmer
+end
+
+class String
+  def trim
+    ltrim.rtrim
+  end
+
+  def ltrim
+    gsub(%r(\A[[:space:]]*), '')
+  end
+
+  def rtrim
+    gsub(%r([[:space:]]*\Z), '')
+  end
 end
