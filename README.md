@@ -4,33 +4,33 @@ This gem adds methods for trimming spaces to `String`.
 This gem trims spaces using `[:space:]` of POSIX character class.
 So trimmed spaces by this gem are below.
 
-|Character|
-|---|
-|U+0009|
-|U+000A|
-|U+000B|
-|U+000C|
-|U+000D|
-|U+0020|
-|U+00A0|
-|U+0085|
-|U+1680|
-|U+2000|
-|U+2001|
-|U+2002|
-|U+2003|
-|U+2004|
-|U+2005|
-|U+2006|
-|U+2007|
-|U+2008|
-|U+2009|
-|U+200A|
-|U+202F|
-|U+205F|
-|U+2028|
-|U+2029|
-|U+3000|
+|Character|Name|
+|---|---|
+|U+0009|Character tabulation|
+|U+000A|Line feed|
+|U+000B|Vertical tabulation|
+|U+000C|Form feed|
+|U+000D|Carriage return|
+|U+0020|Space|
+|U+00A0|No-break space|
+|U+0085|Next line|
+|U+1680|Ogham space mark|
+|U+2000|En quad|
+|U+2001|Em quad|
+|U+2002|En space|
+|U+2003|Em space|
+|U+2004|Three-per-em space|
+|U+2005|Four-per-em space|
+|U+2006|Six-per-em space|
+|U+2007|Figure space|
+|U+2008|Punctuation space|
+|U+2009|Thin space|
+|U+200A|Hair space|
+|U+202F|Narrow no-break space|
+|U+205F|Medium mathematical space|
+|U+2028|Line separator|
+|U+2029|Paragraph separator|
+|U+3000|Ideographic space|
     
 ## Installation
 
