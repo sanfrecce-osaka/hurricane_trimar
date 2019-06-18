@@ -61,14 +61,14 @@ STR
 <<STR.ltrim
 \u0020\u3000
 \u0020\u3000Hello World\u0020\u3000
-\u3000\u0020"
+\u3000\u0020
 STR
 # => "Hello World\n\u3000\u0020\n"
 
 <<STR.rtrim
 \u0020\u3000
 \u0020\u3000Hello World\u0020\u3000
-\u3000\u0020"
+\u3000\u0020
 STR
 # => "\u0020\u3000\nHello World" 
 ```
