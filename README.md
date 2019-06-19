@@ -1,8 +1,7 @@
 # HurricaneTrimar
 
-This gem adds methods for trimming spaces to `String`.
-This gem trims spaces using `[:space:]` of POSIX character class.
-So trimmed spaces by this gem are below.
+This gem adds methods for trimming spaces to `String`, using `[:space:]` POSIX character class.
+Trimmed spaces by this gem are below.
 
 |Character|Name|
 |---|---|
