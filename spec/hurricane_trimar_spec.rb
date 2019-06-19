@@ -35,23 +35,23 @@ RSpec.describe String do
   describe '#trim' do
     let(:trim) { text.trim }
 
-    context 'empty string' do
+    context 'with empty string' do
       let(:text) { '' }
 
-      it 'return empty string' do
+      it 'returns empty string' do
         expect(trim).to eq ''
       end
     end
 
-    context 'single line' do
+    context 'with single line' do
       let(:text) { "#{@spaces}テ ス　ト#{@spaces}" }
 
-      it 'trim left and right spaces' do
+      it 'trims left and right spaces' do
         expect(trim).to eq 'テ ス　ト'
       end
     end
 
-    context 'multi lines' do
+    context 'with multi lines' do
       let(:text) do
         <<~STR
           #{@spaces}
@@ -61,7 +61,7 @@ RSpec.describe String do
         STR
       end
 
-      it 'trim left and right spaces including newline characters' do
+      it 'trims left and right spaces including newline characters' do
         expect(trim).to eq <<~STR.chomp
           テ ス　ト#{@spaces}
           #{@spaces}テ ス　ト
@@ -73,23 +73,23 @@ RSpec.describe String do
   describe '#ltrim' do
     let(:ltrim) { text.ltrim }
 
-    context 'empty string' do
+    context 'with empty string' do
       let(:text) { '' }
 
-      it 'return empty string' do
+      it 'returns empty string' do
         expect(ltrim).to eq ''
       end
     end
 
-    context 'single line' do
+    context 'with single line' do
       let(:text) { "#{@spaces}テ ス　ト#{@spaces}" }
 
-      it 'trim left spaces' do
+      it 'trims left spaces' do
         expect(ltrim).to eq "テ ス　ト#{@spaces}"
       end
     end
 
-    context 'multi lines' do
+    context 'with multi lines' do
       let(:text) do
         <<~STR
           #{@spaces}
@@ -99,7 +99,7 @@ RSpec.describe String do
         STR
       end
 
-      it 'trim left spaces including newline characters before text' do
+      it 'trims left spaces including newline characters' do
         expect(ltrim).to eq <<~STR
           テ ス　ト#{@spaces}
           #{@spaces}テ ス　ト#{@spaces}
@@ -112,23 +112,23 @@ RSpec.describe String do
   describe '#rtrim' do
     let(:rtrim) { text.rtrim }
 
-    context 'empty string' do
+    context 'wtih empty string' do
       let(:text) { '' }
 
-      it 'return empty string' do
+      it 'returns empty string' do
         expect(rtrim).to eq ''
       end
     end
 
-    context 'single line' do
+    context 'with single line' do
       let(:text) { "#{@spaces}テ ス　ト#{@spaces}" }
 
-      it 'trim right spaces' do
+      it 'trims right spaces' do
         expect(rtrim).to eq "#{@spaces}テ ス　ト"
       end
     end
 
-    context 'multi lines' do
+    context 'with multi lines' do
       let(:text) do
         <<~STR
           #{@spaces}
@@ -138,7 +138,7 @@ RSpec.describe String do
         STR
       end
 
-      it 'trim right spaces including newline characters' do
+      it 'trims right spaces including newline characters' do
         expect(rtrim).to eq <<~STR.chomp
           #{@spaces}
           #{@spaces}テ ス　ト#{@spaces}
